@@ -13,9 +13,37 @@ def arithmetics(x, y):
     print("Integer Division: ", x // y)
     print("Mod: ", x % y)
 
+# Demonstration of conditions in Python
+def conditions(i, j):
+    print("Numbers are different from 0: ", bool(i) and bool(j))
+    if i > 0 and j > 0:
+        print("Both numbers are positive.")
+    elif i > 0:
+        print("First number is positive, second is negative.")
+    else:
+        print("First number is negative, second is positive.")
+
+# Demonstration of cycles in Python
+def cycleString(word):
+    for char in word:
+        print(char)
+
+def cycleNum(n, m):
+    print("From first number to second number to the 3rd power: ")
+    for i in range(n, m):
+        print(i ** 3)
+    print("2^i, from 0 to second number:")
+    for i in range(m):
+        print(2 ** -i)
+    print("From 0 to -20 with step equal to second number: ")
+    for i in range(0, -20, -n):
+        print(i)
+
 def showMenuOptions():
     print("--- Please select a demonstration option to run: ")
-    print("1. Operators (integers and floating point)")
+    print("1. Math Operators (integers and floating point)")
+    print("2. Conditions")
+    print("3. Cycles")
     print("4. Exit program")
     option = int(input())
     return option
@@ -31,9 +59,15 @@ while option != 4:
         y = int(input("Type second number for the demonstration: "))
         print(arithmetics(x, y))
     elif option == 2:
-        print("Run second option")
+        i = int(input("Type first number for the demonstration: "))
+        j = int(input("Type second number for the demonstration: "))
+        print(conditions(i, j))
     elif option == 3:
-        print("Run third option")
+        word = str(input("Type word for iteration demonstration: "))
+        print(cycleString(word))
+        n = int(input("Type first number for the demonstration: "))
+        m = int(input("Type second number for the demonstration: "))
+        print(cycleNum(n, m))
     print()
     option = showMenuOptions()
 
