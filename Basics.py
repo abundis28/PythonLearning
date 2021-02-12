@@ -1,5 +1,5 @@
 # Demonstration of how operators are used in Python
-def operators(x, y):
+def arithmetics(x, y):
     print("Sum: ", x + y)
     print("Substraction: ", x - y)
     print("Exponential (first^second): ", x ** y)
@@ -7,21 +7,28 @@ def operators(x, y):
     print("Integer Division: ", x // y)
     print("Mod: ", x % y)
 
+def showMenuOptions():
+    print("--- Please select a demonstration option to run: ")
+    print("1. Operators (integers and floating point)")
+    print("4. Exit program")
+    option = int(input())
+    return option
+
 ### MAIN ###
 print("Welcome to the Python basics demonstration!!!")
 print()
-option = int(input("Please select an option of demonstration to run: "))
+option = showMenuOptions()
 print()
 while option != 4:
     if option == 1:
-        x = int(input("Type first number for the operators demonstration: "))
-        y = int(input("Type second number for the operators demonstration: "))
-        print(operators(x, y))
+        x = int(input("Type first number for the demonstration: "))
+        y = int(input("Type second number for the demonstration: "))
+        print(arithmetics(x, y))
     elif option == 2:
         print("Run second option")
     elif option == 3:
         print("Run third option")
     print()
-    option = int(input("Please select another option of demonstration to run: "))
+    option = showMenuOptions()
 
 print("Thanks for running this code!")
