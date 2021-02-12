@@ -1,9 +1,15 @@
+import math
+
 # Demonstration of how operators are used in Python
 def arithmetics(x, y):
     print("Sum: ", x + y)
+    print("Floating point sum: ", float(x) + float(y))
     print("Substraction: ", x - y)
     print("Exponential (first^second): ", x ** y)
+    print("Negative Exponential: ", x ** -y)
     print("Division: ", x / y)
+    print("Division: ", math.ceil(x / y))
+    print("Rounded-up division: ", math.ceil(x / y))
     print("Integer Division: ", x // y)
     print("Mod: ", x % y)
 
