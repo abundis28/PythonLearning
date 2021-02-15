@@ -16,8 +16,8 @@ def arithmetics(x, y):
 # Demonstration of conditions in Python
 def conditions(i, j):
     print("Numbers are different from 0: ", bool(i) and bool(j))
-    if i > 0 and j > 0:
-        print("Both numbers are positive.")
+    if i >= 0 and j >= 0:
+        print("Both numbers are positive or equal to 0.")
     elif i > 0:
         print("First number is positive, second is negative.")
     else:
